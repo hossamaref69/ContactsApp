@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#FFFFFF">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameTil"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:textColorHint="#5D5C5C"
+        android:hint="Name"
+        app:startIconDrawable="@drawable/name_icon"
+        app:boxStrokeColor="@color/purple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameEdt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="textPersonName"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/phoneTil"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="phone number"
+        android:textColorHint="#5D5C5C"
+        app:boxStrokeColor="@color/purple"
+       app:startIconDrawable="@drawable/phone_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameTil"
+        app:counterMaxLength="11"
+        app:counterEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phoneEdt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="number"
+            android:maxLength="11"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/discTil"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="discrubtion"
+
+        android:textColorHint="#5D5C5C"
+        app:boxStrokeColor="@color/purple"
+        app:startIconDrawable="@drawable/discrubtion_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneTil">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/discrubtionEdt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="textPersonName"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/savedBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Save"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/discTil"
+        app:layout_constraintStart_toStartOf="@+id/discTil"
+        app:layout_constraintTop_toBottomOf="@+id/discTil" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/savedBt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
